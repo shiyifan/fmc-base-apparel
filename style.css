@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-desat-red: hsl(0, 36%, 70%);
+  --clr-soft-red: hsl(0, 93%, 68%);
+  --clr-dark-gray-red: hsl(0, 6%, 24%);
+  --ff-josefin: 'Josefin Sans', sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 1440px;
+  border: var(--clr-dark-gray-red) 1px solid;
+}
+
+.topic {
+  font-family: var(--ff-josefin);
+  padding-left: 9.5em;
+}
+
+.topic-mark {
+  margin-top: 3.9em;
+}
+
+.topic-header {
+  width: 4.5em;
+  font-size: 4em;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  line-height: 1em;
+  margin-top: 2.1em;
+  margin-bottom: 1em;
+}
+.topic-header::first-line {
+  font-weight: 200;
+  color: var(--clr-desat-red);
+}
+
+.topic-content {
+  margin-top: 0;
+  line-height: 1.9em;
+  width: 70%;
+}
+
+.email > input {
+  padding: 1em 1.5em;
+  border-top-left-radius: 11% 50%;
+  border-bottom-left-radius: 11% 50%;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.hero-img {
+  display: block;
+}
