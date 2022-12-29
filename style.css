@@ -22,6 +22,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   max-width: 1440px;
+  min-width: 0;
   box-shadow: 0 0 40px 0 rgb(172, 172, 172);
 }
 
@@ -34,6 +35,9 @@ body {
 
 .topic-mark {
   margin-top: 3.9em;
+}
+.topic-hero__mobile {
+  display: none;
 }
 
 .topic-header {
@@ -83,6 +87,9 @@ body {
   transform: translateY(-50%);
   right: 7.5em;
 }
+.topic-email > svg.err-shown {
+  display: block;
+}
 .topic-email > button {
   height: 100%;
   width: 7.5em;
@@ -111,7 +118,51 @@ body {
   color: var(--clr-soft-red);
   font-size: 0.9em;
 }
+.topic-err-msg.err-shown {
+  display: block;
+}
 
+.container > * {
+  flex-basis: 100%;
+}
+.container > picture {
+  min-width: 0;
+}
 .hero-img {
   display: block;
+  min-width: 100%;
+  object-fit: fill;
+}
+
+@media (max-width: 1000px) {
+  .topic {
+    padding: 0;
+  }
+  .topic-header {
+    width: 100%;
+    text-align: center;
+  }
+  .topic-content {
+    width: 100%;
+    padding: 0 4em;
+    text-align: center;
+  }
+  .topic-email {
+    width: 100%;
+    padding: 0 4em;
+  }
+  .topic-email > button {
+    right: 4em;
+  }
+  .topic-err-msg {
+    width: 100%;
+    padding-left: 5.5em;
+  }
+  .container > picture {
+    display: none;
+  }
+  .topic-hero__mobile {
+    display: block;
+    min-width: 100%;
+  }
 }
