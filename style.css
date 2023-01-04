@@ -14,12 +14,11 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
   display: flex;
+  margin: auto;
   flex-flow: row nowrap;
   width: min(70%, 1440px);
   box-shadow: 0 0 40px 0 rgb(172, 172, 172);
@@ -63,7 +62,7 @@ body {
 
 .topic-email {
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: 2.8em;
   width: 70%;
 }
 .topic-email > input {
@@ -111,28 +110,26 @@ body {
   box-shadow: 0 1em 3em 0px var(--clr-desat-red);
 }
 
-.topic-err-msg {
-  display: none;
-  margin: 0;
-  padding: 1em 1.5em;
+.topic-email::after {
+  content: none;
+  position: absolute;
+  top: 120%;
   color: var(--clr-soft-red);
   font-size: 0.9em;
+  padding: 0 1.5em;
 }
-.topic-err-msg.err-shown {
-  display: block;
+.topic-email.topic-email__err::after {
+  content: 'Please provide a valid email';
 }
 
 .container > * {
   flex-basis: 100%;
 }
-.container > picture {
+
+.hero-img {
   min-width: 0;
   max-width: max-content;
-}
-.hero-img {
   display: block;
-  height: 100%;
-  width: 100%;
   object-fit: cover;
 }
 
@@ -170,11 +167,17 @@ body {
     width: 100%;
     padding-left: 5.5em;
   }
-  .container > picture {
+  .hero-img {
     display: none;
   }
   .topic-hero__mobile {
     display: block;
     min-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
   }
 }
