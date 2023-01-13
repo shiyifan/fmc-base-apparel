@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Another</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Josefin+Sans:wght@300;400;600&family=Montserrat:wght@500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <main class="container">
+    <img class="logo" src="images/logo.svg" alt="log" />
+    <img class="hero" srcset="images/hero-desktop.jpg 610w, images/hero-mobile.jpg 375w"
+      sizes="(min-width: 900px) 600px, 300px" alt="hero" />
+    <div class="content">
+      <h1 class="content-header">We're Coming Soon</h1>
+      <p class="content-text">
+        Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date
+        with announcements
+        and our launch deals.
+      </p>
+      <form class="content-email" action="javascript:void(0)">
+        <div class="content-email-input">
+          <input placeholder="Email Address" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" /><button
+            type="submit"><img src="images/icon-arrow.svg" alt="Click"></button>
+        </div>
+        <p>Please provide a valid email</p>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
